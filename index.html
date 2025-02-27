@@ -8,9 +8,14 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1><a href="#">LFC - Liga de Futebol Caxiense</a></h1>
-            <p>O melhor portal para campeonatos esportivos</p>
+        <header>
+            <div class="logo">
+                <img src="WhatsApp Image 2025-02-27 at 09.56.18 (1).jpeg" alt="Logo LFC" class="logo-img"> 
+                <h1><a href="#">LFC - Liga de Futebol Caxiense</a></h1>
+               
+            </div>
+        </header>
+        
         </div>
         <nav>
             <ul class="menu">
@@ -34,7 +39,15 @@
                     </ul>
                 </li>
                 <li><a href="https://www.youtube.com/@ls94academy">LSTV</a></li>
-                <li><a href="#" target="_blank">Patrocinadores</a></li>
+                <li><a href="#">Patrocinadores</a>
+                <ul class="submenu patrocinadores-submenu">
+                    <li class="submenu-title">Nossos Parceiros</li>
+                    <li><a href="https://www.instagram.com/futbaseriodejaneiro?igsh=Nm8wbzVlbGE4M2pu"><img src="WhatsApp Image 2025-02-20 at 19.06.36.jpeg" alt="Futbase Rio de Janeiro"></a></li>
+                    <li><a href="https://www.instagram.com/ls94academy?igsh=ZWkyNnVhZjRmc25l"><img src="WhatsApp Image 2025-02-20 at 19.09.40.jpeg" alt="LS 94 Academy"></a></li>
+                    
+                </ul>
+                </li>
+                
                 <li><a href="https://linktr.ee/ligadefutebolcaxiense">Contatos</a></li>
             </ul>
         </nav>
@@ -44,7 +57,7 @@
         <section class="hero">
             <h2>Bem-vindo ao Nosso Site!</h2>
             <p>Fique por dentro de tudo sobre campeonatos e mais!</p>
-            <a href="#" class="cta">Confira os campeonatos</a>
+            <a href="https://drive.google.com/drive/folders/1Y4pe9BZMcyNAwl2zKBskS_5Eo-97bHOt?usp=sharing" class="cta">Confira os campeonatos</a>
         </section>
 
         <section class="about">
@@ -73,11 +86,9 @@
         <div class="footer-content">
             <div class="footer-links">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Campeonatos</a></li>
+                    <li><a href="#">Inscrição</a></li>
+                    <li><a href="https://drive.google.com/drive/folders/1Y4pe9BZMcyNAwl2zKBskS_5Eo-97bHOt?usp=sharing">Calendário de Competições</a></li>
                     <li><a href="https://drive.google.com/drive/folders/1jpvFBkBgE9otrAgdeA9FC43_fG7C19ZS?usp=sharing">Regulamento</a></li>
-                    <li><a href="#">Patrocinadores</a></li>
-                    <li><a href="#">Contatos</a></li>
                 </ul>
             </div>
             <div class="footer-info">
@@ -192,6 +203,66 @@ nav ul li ul li ul {
 nav ul li a:hover, nav ul li ul li a:hover {
     background-color: #383737;
 }
+
+/* Estiliza o submenu da aba Patrocinadores */
+.patrocinadores-submenu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    list-style: none;
+    padding: 20px;
+    min-width: 200px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Título "Nossos Parceiros" */
+.patrocinadores-submenu .submenu-title {
+    color: white; /* Letra branca */
+    background-color: black; /* Fundo preto */
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Exibe o submenu ao passar o mouse sobre "Patrocinadores" */
+nav ul li:hover > .patrocinadores-submenu {
+    display: block;
+}
+
+/* Estiliza os ícones dos patrocinadores */
+.patrocinadores-submenu img {
+    width: 100px;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de zoom ao passar o mouse nos ícones */
+.patrocinadores-submenu img:hover {
+    transform: scale(1.1);
+}
+
+/* Estiliza a logo */
+.logo {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.logo-img {
+    width: 60px; /* Ajuste conforme necessário */
+    height: auto;
+    margin-right: 15px; /* Espaço entre a imagem e o título */
+}
+
+.logo h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+
 
 /* Estilos do conteúdo principal */
 main {
