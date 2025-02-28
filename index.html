@@ -19,6 +19,7 @@
         </div>
         <nav>
             <ul class="menu">
+                <li><a href="#">Início</a></li>
                 <li><a href="#">Campeonatos</a>
                     <ul class="submenu">
                         <li><a href="#">Quadrangular</a>
@@ -49,15 +50,17 @@
                 </li>
                 
                 <li><a href="https://linktr.ee/ligadefutebolcaxiense">Contatos</a></li>
+                
             </ul>
         </nav>
+        <div class="menu-toggle">☰ Menu</div>
     </header>
 
     <main>
         <section class="hero">
             <h2>Bem-vindo ao Nosso Site!</h2>
             <p>Fique por dentro de tudo sobre campeonatos e mais!</p>
-            <a href="https://drive.google.com/drive/folders/1Y4pe9BZMcyNAwl2zKBskS_5Eo-97bHOt?usp=sharing" class="cta">Calendário de competições</a>
+            <a href="https://drive.google.com/drive/folders/1Y4pe9BZMcyNAwl2zKBskS_5Eo-97bHOt?usp=sharing" class="cta">Confira os campeonatos</a>
         </section>
 
         <section class="about">
@@ -97,15 +100,137 @@
         </div>
     </footer>
 </body>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const menu = document.querySelector(".menu");
+    
+        // Função para alternar a visibilidade do menu
+        menuToggle.addEventListener("click", function (event) {
+            event.stopPropagation(); // Impede que o clique se propague e feche o menu imediatamente
+            menu.style.display = menu.style.display === "block" ? "none" : "block";
+        });
+    
+        // Fecha o menu se clicar fora dele
+        document.addEventListener("click", function (event) {
+            if (menu.style.display === "block" && !menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.style.display = "none";
+            }
+        });
+    });
+    </script>
+    
+    
 </html>
 
 <style>
 /* Reset de alguns estilos padrão do navegador */
-* {
+ {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/* Torna o menu responsivo */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        background-color: #333; /* Cor de fundo simples */
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 80%;
+        max-width: 250px;
+        text-align: center;
+        padding: 10px;
+        border-radius: 10px; /* Bordas arredondadas */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    }
+
+    .menu li {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+    .menu li a:hover {
+        background-color: #444; /* Efeito hover */
+    }
+
+    
+}
+.menu.open {
+    display: block;
+}
+@media (max-width: 768px) {
+    .logo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .logo-img {
+        width: 80px;
+    }
+}
+@media (max-width: 768px) {
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.menu-toggle {
+    display: none; /* Esconde o botão por padrão */
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Mostra o botão apenas em telas pequenas */
+        background-color: #333; /* Cor de fundo mais simples e moderna */
+        color: white;
+        text-align: center;
+        padding: 12px 20px; /* Ajuste do padding */
+        cursor: pointer;
+        font-size: 20px;
+        border-radius: 5px; /* Bordas arredondadas */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        transition: background-color 0.3s ease;
+    }
+
+    .menu-toggle:hover {
+        background-color: #444; /* Cor de fundo ao passar o mouse */
+    }
+}
+
 
 /* Estilos gerais */
 body {
