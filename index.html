@@ -361,7 +361,7 @@ nav ul li a:hover, nav ul li ul li a:hover {
     border-radius: 5px;
 }
 /* Estilização do tooltip (nome do patrocinador) */
-.patrocinadores-submenu a::after {
+.patrocinadores-submenu li a::after {
     content: attr(data-nome); /* Obtém o nome do patrocinador */
     position: absolute;
     bottom: -25px;  /* Ajusta a posição abaixo do ícone */
@@ -379,7 +379,7 @@ nav ul li a:hover, nav ul li ul li a:hover {
 }
 
 /* Exibir o tooltip ao passar o mouse */
-.patrocinadores-submenu a:hover::after {
+.patrocinadores-submenu li a:hover::after {
     opacity: 1;
     visibility: visible;
 }
