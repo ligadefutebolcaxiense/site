@@ -41,7 +41,7 @@
                 <li><a href="https://www.youtube.com/@ls94academy">LSTV</a></li>
                 <li><a href="#">Cartola LFC</a></li>
                 <li><a href="#">Patrocinadores</a>
-                <ul class="submenu patrocinadores-submenu">
+                <ul class="patrocinadores-submenu">
                     <li class="submenu-title">Nossos Parceiros</li>
                     <li><a href="https://www.instagram.com/futbaseriodejaneiro?igsh=Nm8wbzVlbGE4M2pu"><img src="WhatsApp Image 2025-02-20 at 19.06.36.jpeg" alt="Futbase Rio de Janeiro"></a></li>
                     <li><a href="https://www.instagram.com/ls94academy?igsh=ZWkyNnVhZjRmc25l"><img src="WhatsApp Image 2025-02-20 at 19.09.40.jpeg" alt="LS 94 Academy"></a></li>
@@ -367,13 +367,13 @@ nav ul li:hover > .patrocinadores-submenu {
 }
 
 /* Estiliza os ícones dos patrocinadores */
-.patrocinadores-submenu img {
-    width: 100px;
-    height: auto;
-    margin: 10px;
-    transition: transform 0.3s ease-in-out;
+.patrocinadores-submenu li img {
+    width: 35px;  /* Reduzido para 35px */
+    height: 35px; /* Mantém proporção quadrada */
+    object-fit: contain; /* Garante que as imagens não fiquem cortadas */
+    margin: 3px;  /* Menos espaço entre as imagens */
+    transition: transform 0.2s ease-in-out;
 }
-
 /* Efeito de zoom ao passar o mouse nos ícones */
 .patrocinadores-submenu img:hover {
     transform: scale(1.1);
