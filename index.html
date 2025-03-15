@@ -360,6 +360,29 @@ nav ul li a:hover, nav ul li ul li a:hover {
     font-weight: bold;
     border-radius: 5px;
 }
+/* Estilização do tooltip (nome do patrocinador) */
+.patrocinadores-submenu a::after {
+    content: attr(data-nome); /* Obtém o nome do patrocinador */
+    position: absolute;
+    bottom: -25px;  /* Ajusta a posição abaixo do ícone */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+/* Exibir o tooltip ao passar o mouse */
+.patrocinadores-submenu a:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
 
 /* Exibe o submenu ao passar o mouse sobre "Patrocinadores" */
 nav ul li:hover > .patrocinadores-submenu {
