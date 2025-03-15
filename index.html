@@ -360,29 +360,35 @@ nav ul li a:hover, nav ul li ul li a:hover {
     font-weight: bold;
     border-radius: 5px;
 }
-/* Estilização do tooltip (nome do patrocinador) */
+
+.patrocinadores-submenu li a {
+    position: relative; /* Necessário para o posicionamento do nome */
+    display: inline-block; /* Faz com que os itens fiquem lado a lado */
+}
+    
 .patrocinadores-submenu li a::after {
     content: attr(data-nome); /* Obtém o nome do patrocinador */
     position: absolute;
-    bottom: -25px;  /* Ajusta a posição abaixo do ícone */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.8);
-    color: #fff;
+    left: 100%;  /* Coloca o nome à direita da imagem */
+    top: 50%;  /* Centraliza verticalmente ao lado da imagem */
+    transform: translateY(-50%); /* Ajusta o alinhamento */
+    margin-left: 10px; /* Espaço entre a imagem e o nome */
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    color: #fff; /* Cor do texto */
     padding: 5px 8px;
     border-radius: 3px;
     font-size: 12px;
     white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
+    opacity: 0; /* Inicialmente invisível */
+    visibility: hidden; /* Inicialmente invisível */
     transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
 }
 
-/* Exibir o tooltip ao passar o mouse */
 .patrocinadores-submenu li a:hover::after {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1; /* Torna visível */
+    visibility: visible; /* Torna visível */
 }
+
 
 /* Exibe o submenu ao passar o mouse sobre "Patrocinadores" */
 nav ul li:hover > .patrocinadores-submenu {
